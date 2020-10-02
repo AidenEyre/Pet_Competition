@@ -14,9 +14,145 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Pet Competition</title>
+    <link href="styles.css" rel="stylesheet" />
   </head>
 
   <body>
-      
+    <header>
+      <h1>Aiden's Pet Competition!</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li>Pet Info</li>
+        <li>Contact Info</li>
+        <li>Competition Entry</li>
+        <li>Pet Boarding Info</li>
+      </ul>
+    </nav>
+
+    <form action="">
+      <fieldset id="petInfo">
+        <legend>Pet Information Form</legend>
+        <div class="formRow">
+          <label for="petName">Name</label>
+          <input name="petName" id="petName" type="text" />
+        </div>
+
+        <div class="formRow">
+          <label for="petBday">Birthdate</label>
+          <input name="petBday" id="petBday" type="date" />
+        </div>
+
+        <div class="formRow">
+          <label>Type of Pet:</label>
+          <label for="isCat">Cat</label>
+          <input name="petType" id="isCat" type="radio" />
+
+          <label for="isDog">Dog</label>
+          <input name="petType" id="isDog" type="radio" />
+
+          <label for="isReptile">Reptile</label>
+          <input name="petType" id="isReptile" type="radio" />
+
+          <label for="isBird">Bird</label>
+          <input name="petType" id="isBird" type="radio" />
+
+          <label for="isRodent">Rodent</label>
+          <input name="petType" id="isRodent" type="radio" />
+        </div>
+
+        <div class="formRow">
+          <label for="petBio">Tell Us About Your Pet!</label>
+          <textarea name="petBio" id="petBio"></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset id="contactInfo">
+        <legend>Contact Information Form</legend>
+
+        <div class="formRow">
+          <label for="ownerName">Name*</label>
+          <input name="ownerName" id="ownerName" type="text" required />
+        </div>
+
+        <div class="formRow">
+          <label for="ownerPhone">Phone*</label>
+          <input
+            name="ownerPhone"
+            id="ownerPhone"
+            type="tel"
+            placeholder="(###) ###-####"
+            pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$"
+            required
+          />
+        </div>
+
+        <div class="formRow">
+          <label for="ownerEmail">E-mail*</label>
+          <input name="ownerEmail" id="ownerEmail" type="email" required />
+        </div>
+      </fieldset>
+
+      <fieldset id="compEntry">
+        <legend>More Info About Competition Entry</legend>
+
+        <div class="formRow">
+          <input name="singingPetComp" id="singingPetComp" type="checkbox" />
+          <label for="singingPetComp">Singing Pet Competition</label>
+
+          <input name="cutestPetComp" id="cutestPetComp" type="checkbox" />
+          <label for="cutestPetComp">Cutest Pet Competition</label>
+
+          <input name="petTricksComp" id="petTricksComp" type="checkbox" />
+          <label for="petTricksComp">Pet Tricks Competition</label>
+        </div>
+
+        <div class="formRow">
+          <label for="entryName">Name of Entry</label>
+          <input name="entryName" id="entryName" type="text" />
+        </div>
+
+        <div class="formRow">
+          <label for="tricks">For Pet Tricks Competition</label>
+          <select name="tricks" id="tricks">
+            <option value="obstacleCourse">Obstacle Course</option>
+            <option value="catchingTricks">frisbee/ball/other catching</option>
+            <option value="noItemTricks">roll over/play dead</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <fieldset id="boarding">
+        <legend>Pet Boarding Form</legend>
+
+        <div class="formRow">
+          <label for="daysBoarding">Days Boarding (0-3)</label>
+          <input
+            name="daysBoarding"
+            id="daysBoarding"
+            type="number"
+            value="0"
+            step="1"
+            min="0"
+            max="3"
+          />
+        </div>
+
+        <div class="formRow">
+          <label for="kennelSize">Size of Kennel (inches): 0</label>
+          <input
+            name="kennelSize"
+            id="kennelSize"
+            type="range"
+            value="24"
+            step="8"
+            min="0"
+            max="48"
+          />
+        </div>
+      </fieldset>
+    </form>
   </body>
 </html>
