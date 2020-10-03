@@ -14,6 +14,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Pet Competition</title>
+    <script type="text/javascript" src="code.js"></script>
     <link href="styles.css" rel="stylesheet" />
   </head>
 
@@ -21,14 +22,11 @@
     <header>
       <h1>Aiden's Pet Competition!</h1>
     </header>
-
     <nav>
-      <ul>
-        <li>Pet Info</li>
-        <li>Contact Info</li>
-        <li>Competition Entry</li>
-        <li>Pet Boarding Info</li>
-      </ul>
+      <button id="petInfoButton">Pet Info</button>
+      <button id="contactInfoButton">Contact Info</button>
+      <button id="compInfoButton">Competition Entry</button>
+      <button id="boardingInfoButton">Pet Boarding Info</button>
     </nav>
 
     <form action="">
@@ -45,20 +43,20 @@
         </div>
 
         <div class="formRow">
-          <label>Type of Pet:</label>
-          <label for="isCat">Cat</label>
+          <label id="typePetLabel">Type of Pet:</label>
+          <label for="isCat">Cat:</label>
           <input name="petType" id="isCat" type="radio" />
 
-          <label for="isDog">Dog</label>
+          <label for="isDog">Dog:</label>
           <input name="petType" id="isDog" type="radio" />
 
-          <label for="isReptile">Reptile</label>
+          <label for="isReptile">Reptile:</label>
           <input name="petType" id="isReptile" type="radio" />
 
-          <label for="isBird">Bird</label>
+          <label for="isBird">Bird:</label>
           <input name="petType" id="isBird" type="radio" />
 
-          <label for="isRodent">Rodent</label>
+          <label for="isRodent">Rodent:</label>
           <input name="petType" id="isRodent" type="radio" />
         </div>
 
@@ -141,7 +139,7 @@
         </div>
 
         <div class="formRow">
-          <label for="kennelSize">Size of Kennel (inches): 0</label>
+          <label for="kennelSize" id="kennelNum">Size of Kennel (inches increments of 8)</label>
           <input
             name="kennelSize"
             id="kennelSize"
@@ -153,6 +151,10 @@
           />
         </div>
       </fieldset>
+
+      <div id="entrySubmit">
+        <input type="submit" value="Submit Your Entry!">
+      </div>
     </form>
   </body>
 </html>

@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+/* 
+  CSS Styles for Aiden's Pet Cometition
+   
+   Author: Aiden Eyre
+   Date:   02 Oct 2020
+   
+   Filename: styles.css 
+*/
+
+body {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    width: 100%;
+}
+
+body header h1 {
+    display: flexbox;
+    float: none;
+}
+
+nav {
+    font-size: 0;
+}
+
+nav button {
+    display: inline-block;
+    width: 25%;
+    font-size: 24px;
+}
+
+#contactInfo, #boarding, #compEntry {
+    display: none;
+}
+
+legend {
+    font-size: 2em;
+}
+
+fieldset {
+    text-align: center;
+}
+
+fieldset div {
+    font-size: 1.4em;
+    padding: 1.5% 0;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+#typePetLabel {
+    display: block;
+    margin-bottom: 1%;
+}
+
+#petType {
+    display: inline;
+    clear: both;
+    border-right: 1px solid gray;
+}
+
+#entrySubmit {
+    margin: 1% 0;
+}
+
+#entrySubmit input {
+    padding: .5%;
+    font-size: 1.7em;
+    border: 1px solid gray;
+}
+
+/* Validation Styles */
+
+#ownerName:invalid, #ownerEmail:invalid, #ownerPhone:invalid {
+    background-color:rgba(255, 5, 5, 0.37);
+}
+
+#ownerName:valid, #ownerEmail:valid, #ownerPhone:valid {
+    background-color:rgba(55, 255, 5, 0.37);
+}
