@@ -29,7 +29,10 @@
       <button id="boardingInfoButton">Pet Boarding Info</button>
     </nav>
 
-    <form action="">
+    <form
+      method="POST"
+      action="http://icarus.cs.weber.edu/~linda/cs2350/submit_pet1.php"
+    >
       <fieldset id="petInfo">
         <legend>Pet Information Form</legend>
         <div class="formRow">
@@ -139,7 +142,9 @@
         </div>
 
         <div class="formRow">
-          <label for="kennelSize" id="kennelNum">Size of Kennel (inches increments of 8)</label>
+          <label for="kennelSize" id="kennelNum"
+            >Size of Kennel (inches increments of 8)</label
+          >
           <input
             name="kennelSize"
             id="kennelSize"
@@ -153,8 +158,11 @@
       </fieldset>
 
       <div id="entrySubmit">
-        <input type="submit" value="Submit Your Entry!">
+        <input type="submit" value="Submit Your Entry!" />
       </div>
     </form>
+    <img src="images/dog_image.jpg" alt="Picture of a dog" />
+    <img src="images/cat_image.jpg" alt="Picture of a cat" />
+    <img src="images/birb_image.jpg" alt="Picutre of a bird" />
   </body>
 </html>

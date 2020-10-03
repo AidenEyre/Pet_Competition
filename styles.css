@@ -9,80 +9,132 @@
    Filename: styles.css 
 */
 
+/* Structural Styles */
+html {
+  background-color: #eae7dc;
+  color: #8e8d8a;
+}
+
 body {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Body and Header Styles */
+
+body img {
+  display: inline-block;
+  width: 32.8%;
 }
 
 header {
-    width: 100%;
+  width: 100%;
+  background-image: url(images/header_image.jpg);
+  background-position: 0% 60%;
 }
 
 body header h1 {
-    display: flexbox;
-    float: none;
+  display: flexbox;
+  float: none;
+  color: black;
+  font-size: 2.2vw;
+  padding: 1% 0% 1% 20%;
 }
 
+/* Navigation Styles */
+
 nav {
-    font-size: 0;
+  font-size: 0;
+  margin-bottom: 3%;
 }
 
 nav button {
-    display: inline-block;
-    width: 25%;
-    font-size: 24px;
+  display: inline-block;
+  width: 25%;
+  font-size: 2vw;
 }
 
-#contactInfo, #boarding, #compEntry {
-    display: none;
+/* Form Sytles */
+
+form {
+  font-family: "Courier New", Courier, monospace;
+}
+
+#contactInfo,
+#boarding,
+#compEntry {
+  display: none;
 }
 
 legend {
-    font-size: 2em;
+  font-size: 2vw;
 }
 
 fieldset {
-    text-align: center;
+  text-align: center;
+  border-color: #e98074;
 }
 
 fieldset div {
-    font-size: 1.4em;
-    padding: 1.5% 0;
+  font-size: 1.4vw;
+  padding: 1.5% 0;
 }
 
 input {
-    border: none;
-    border-bottom: 1px solid gray;
+  border: none;
+  border-bottom: 1px solid gray;
 }
 
 #typePetLabel {
-    display: block;
-    margin-bottom: 1%;
+  display: block;
+  margin-bottom: 1%;
 }
 
 #petType {
-    display: inline;
-    clear: both;
-    border-right: 1px solid gray;
+  display: inline;
+  clear: both;
+  border-right: 1px solid gray;
+  background: url(/images/dog_image.jpg) 100% / cover no-repeat padding-box;
+}
+
+#compEntry {
+  background: url(/images/dog_image.jpg) 100% / cover no-repeat padding-box;
 }
 
 #entrySubmit {
-    margin: 1% 0;
+  margin: 1% auto 5% auto;
+  width: 20%;
 }
 
 #entrySubmit input {
-    padding: .5%;
-    font-size: 1.7em;
-    border: 1px solid gray;
+  padding: 0.5%;
+  font-size: 1.7vw;
+  border: 1px solid gray;
+}
+
+#entrySubmit input,
+button {
+  background-color: #d8c3a5;
+}
+
+#entrySubmit input:hover,
+button:hover {
+  background-color: #d8c3a5c2;
+  cursor: pointer;
 }
 
 /* Validation Styles */
 
-#ownerName:invalid, #ownerEmail:invalid, #ownerPhone:invalid {
-    background-color:rgba(255, 5, 5, 0.37);
+#ownerName:invalid,
+#ownerEmail:invalid,
+#ownerPhone:invalid {
+  background-color: rgba(255, 5, 5, 0.37);
 }
 
-#ownerName:valid, #ownerEmail:valid, #ownerPhone:valid {
-    background-color:rgba(55, 255, 5, 0.37);
+#ownerName:valid,
+#ownerEmail:valid,
+#ownerPhone:valid {
+  background-color: rgba(55, 255, 5, 0.37);
 }
